@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <title>Orc'Kenpo</title>
+  <style>
+    body {
+      background-color: #003d0d;
+      color: #fffbdc;
+      font-family: 'Poppins';
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      flex-direction: column;
+    }
+    h1 {
+      font-size: 2em;
+      margin-bottom: 1em;
+    }
+    .resultado {
+      font-size: 3em;
+      animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.8); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Você Jogou:</h1>
+  <div class="resultado" id="resultado"></div>
+
+  <script>
+    const opcoes = ['🪨 Pedra', '📄 Papel', '✂️ Tesoura'];
+    const sorteado = opcoes[Math.floor(Math.random() * opcoes.length)];
+    document.getElementById('resultado').textContent = sorteado;
+  </script>
+</body>
+</html>
