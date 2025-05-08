@@ -9,25 +9,41 @@
     body {
       background-color: #003d0d;
       color: #fffbdc;
-      font-family: 'Poppins';
+      font-family: 'Poppins', sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
       margin: 0;
+      padding: 2rem;
       flex-direction: column;
+      text-align: center;
+      overflow: hidden;
     }
+
     h1 {
-      font-size: 2em;
-      margin-bottom: 1em;
+      font-size: 6vw;
+      margin-top: -8rem;
     }
+
     .resultado {
-      font-size: 3em;
+      font-size: 10vw;
       animation: fadeIn 1s ease-in-out;
+      word-break: break-word;
     }
+
     @keyframes fadeIn {
       from { opacity: 0; transform: scale(0.8); }
       to { opacity: 1; transform: scale(1); }
+    }
+
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      .resultado {
+        font-size: 4rem;
+      }
     }
   </style>
 </head>
